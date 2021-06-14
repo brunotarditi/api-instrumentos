@@ -34,7 +34,7 @@ public class InstrumentoService {
 
     @Transactional(readOnly = true)
     public List<Instrumento> findByMarcaOrModelo(String filtro){
-        return this.instrumentoRepository.findByMarcaContainingOrModeloContaining(filtro, filtro);
+        return this.instrumentoRepository.findByInstrumentoContainingOrMarcaContainingOrModeloContaining(filtro, filtro, filtro);
     }
     @Transactional
     public boolean delete(Long id) {

@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface InstrumentoRepository extends JpaRepository<Instrumento, Long> {
 
-    List<Instrumento> findByMarcaContainingOrModeloContaining(String marca, String modelo);
+    List<Instrumento> findByInstrumentoContainingOrMarcaContainingOrModeloContaining(String instrumento, String marca, String modelo);
 }
