@@ -33,7 +33,7 @@ public class InstrumentoController {
 
     @GetMapping(path = "/filtro")
     public List<Instrumento> getIntrumentoOrMarcaOrModelo(@RequestParam("termino") String filtro) {
-        return this.instrumentoService.findByMarcaOrModelo(filtro);
+        return this.instrumentoService.findByInstrumentoOrMarcaOrModelo(filtro);
     }
 
     @PostMapping()
